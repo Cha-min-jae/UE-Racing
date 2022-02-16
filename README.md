@@ -99,3 +99,76 @@ void UWheelAndMeshComponent::WheelFunction(float Dt,bool isSlip)​
 ​
 ```
 ![image3](https://user-images.githubusercontent.com/55441587/154320377-88d9fb27-f695-434b-af3f-f455230f3ae1.png)
+
+### 백미러 구현
+```
+void AMyCustomVehicle::CheckBack()​
+
+{​
+
+///1.액터기준 100m지름의 콜리전을 만든다.​
+
+    UWorld* World = GetWorld();​
+
+    if (nullptr == World) return;​
+
+    FVector Center = GetActorLocation();​
+
+    float DetectRadius = 10000.0f;​
+
+    TArray<FOverlapResult> OverlapResults;​
+
+    FCollisionQueryParams CollisionQueryParam(NAME_None, false, this);​
+
+    bool bResult = World->OverlapMultiByChannel(​
+
+        OverlapResults,​
+
+        Center,​
+
+        FQuat::Identity,​
+
+        ECollisionChannel::ECC_GameTraceChannel2,​
+
+        FCollisionShape::MakeSphere(DetectRadius),​
+
+        CollisionQueryParam​
+
+    );​
+    ///2.그 안에 있는 액터중에 Vehicle객체만 모은다.​
+
+    TArray<AMyCustomVehicle*> VehicleArray;​
+    if (bResult)​
+    {​
+        for (auto OverlapResult : OverlapResults)​
+
+        {​
+            AMyCustomVehicle* TargetItemVehicle = Cast<AMyCustomVehicle>(OverlapResult.GetActor());​
+            if (TargetItemVehicle)​
+            {​
+                VehicleArray.Add(TargetItemVehicle);​
+            }​
+        }​
+    }​
+    ///5.BackMirror방향을 내 시점에서 선택된 차량을 바라보는 방향으로 설정한다​
+
+    if (BackMirrorVehicleTarget != nullptr)​
+
+    {​
+
+        FRotator LookAtTarget = UKismetMathLibrary::FindLookAtRotation(Center, BackMirrorVehicleTarget->GetActorLocation());​
+
+        BackMirrorSpringArm->SetWorldRotation(LookAtTarget);​
+
+    }​
+
+}
+    
+    ///5.BackMirror방향을 내 시점에서 선택된 차량을 바라보는 방향으로 설정한다​
+    if (BackMirrorVehicleTarget != nullptr)​
+    {​
+        FRotator LookAtTarget = UKismetMathLibrary::FindLookAtRotation(Center, BackMirrorVehicleTarget->GetActorLocation());​
+        BackMirrorSpringArm->SetWorldRotation(LookAtTarget);
+    }​
+}
+```
