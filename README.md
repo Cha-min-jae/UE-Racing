@@ -24,4 +24,4 @@
 
 * 차량의 바퀴 중심점과 지면의 거리에 따라 위쪽 방향으로 Addforce가 실행된다.​
 ![image2](https://user-images.githubusercontent.com/55441587/154320276-66e23977-f757-471d-a0f2-af64eb8ee5d0.jpeg)
-https://user-images.githubusercontent.com/55441587/154320377-88d9fb27-f695-434b-af3f-f455230f3ae1.png
+
