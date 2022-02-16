@@ -23,4 +23,4 @@
 * 차량이 바퀴에 지탱하는 것처럼 표현​
 
 * 차량의 바퀴 중심점과 지면의 거리에 따라 위쪽 방향으로 Addforce가 실행된다.​
-![image2](https://user-images.githubusercontent.com/55441587/154320276-66e23977-f757-471d-a0f2-af64eb8ee5d0.jpeg
+![image2](https://user-images.githubusercontent.com/55441587/154320276-66e23977-f757-471d-a0f2-af64eb8ee5d0.jpeg)
