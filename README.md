@@ -150,6 +150,51 @@ void AMyCustomVehicle::CheckBack()​
             }​
         }​
     }​
+    ///3.Vehicle객체들 중 뒤에 있는 것만 고르고​
+
+///4.그 중에 제일 가깝거나 액터 뒤쪽 기준으로 각도가 좁은 것을 최종적으로 고른다.​
+
+    BackMirrorVehicleTarget = nullptr;​
+
+    for (auto VV : VehicleArray)​
+
+    {​
+
+        FVector dist = (VV->GetActorLocation() - GetActorLocation());​
+
+        float dot = FVector::DotProduct(GetActorForwardVector(), dist.GetSafeNormal());​
+
+        float AcosAngle = FMath::Acos(dot);    // dot한 값을 아크코사인 계산해 주면 0 ~ 180도 사이의 값 (0 ~ 1)의 양수 값만 나온다.​
+
+        float angle = FMath::RadiansToDegrees(AcosAngle); //그값은 degrees 값인데 이것에 1라디안을 곱해주면 60분법의 도가 나온다.​
+
+        if (150.f <=angle&&angle <= 210.f)​
+
+        {​
+
+            if (BackMirrorVehicleTarget == nullptr)​
+
+            {​
+
+                BackMirrorVehicleTarget = VV;​
+
+                break;​
+
+            }​
+
+            else​
+
+            {​
+
+                /// 현재 검사할 타겟이 지정된 목표보다 거리가 낮을경우 새로 변경​
+
+                FVector distPrev = BackMirrorVehicleTarget->GetActorLocation() - GetActorLocation();​
+
+                float anglePrev = FMath::Abs<float>(FVector::DotProduct(GetActorForwardVector(), distPrev.GetSafeNormal()) * 57.14);​
+
+                if (distPrev.Size() > dist.Size()) BackMirrorVehicleTarget = VV;}}}​
+
+​
     ///5.BackMirror방향을 내 시점에서 선택된 차량을 바라보는 방향으로 설정한다​
 
     if (BackMirrorVehicleTarget != nullptr)​
