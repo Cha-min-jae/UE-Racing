@@ -9,5 +9,17 @@
 
 ### 기술 설명​
 * Vehicle(Pawn), MyPlayerController, Projectile등의 Actor ​
+* 물체의 네트워크 동기화 모델 구현
 * ReplayRecordComponent으로 실시간 정보를 기록.​
+* ReplayController로 기록된 정보를 읽어서 재생하기.​
 * Object Pooling 기법을 이용한 메모리 최적화​
+
+### Vehicle Movement
+
+* 차량의 움직임은 Addforce(앞뒤)와 AddTorque(좌우)로 움직임을 구현​
+
+* 그립주행을 위해 미끄러지는 반대 방향으로 AddForce를 실행함​
+
+* 차량이 바퀴에 지탱하는 것처럼 표현​
+
+* 차량의 바퀴 중심점과 지면의 거리에 따라 위쪽 방향으로 Addforce가 실행된다.​
