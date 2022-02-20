@@ -101,6 +101,7 @@ void UWheelAndMeshComponent::WheelFunction(float Dt,bool isSlip)​
 ![image3](https://user-images.githubusercontent.com/55441587/154320377-88d9fb27-f695-434b-af3f-f455230f3ae1.png)
 
 ### 백미러 구현
+---
 ```
 void AMyCustomVehicle::CheckBack()​
 
@@ -218,8 +219,8 @@ void AMyCustomVehicle::CheckBack()​
 }
 ```
 
-### 백미러 구현
 #### 물체의 네트워크 동기화 모델 구현​
+---
 * 자신의 폰의 위치를 자신의 클라이언트 시점의 위치로 다른 클라이언트들의 시점의 위치를 비슷하게 맞추는 것​
 * 서버에서 받아온 정보를 토대로 외삽값을 산출​
 * 현재 클라이언트 정보와 외삽값으로 보간​
