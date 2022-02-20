@@ -228,7 +228,17 @@ void AMyCustomVehicle::CheckBack()​
 * [NDC] 〈카트라이더〉 0.001초 차이의 승부 - 300km/h 물체의 네트워크 동기화 모델 구현기​
 * https://www.youtube.com/watch?v=r4ZaolMQOzE&t=23s​
 
-
+![2022-02-20](https://user-images.githubusercontent.com/55441587/154846290-91c9f63a-674d-411a-b7da-ae07918e7e79.png)
 ![2022-02-20 (4)](https://user-images.githubusercontent.com/55441587/154846283-ece3c0a5-ffdb-427f-8b3c-fb5eee8cdfa5.png)
 ![2022-02-20 (5)](https://user-images.githubusercontent.com/55441587/154846286-8a7f77b2-36e6-4b32-814c-f53ec921fb63.png)
-![2022-02-20](https://user-images.githubusercontent.com/55441587/154846290-91c9f63a-674d-411a-b7da-ae07918e7e79.png)
+
+
+### Projectile,Mine,Spaceship등의 투사체 오브젝트&오브젝트 풀링
+
+* 메모리 최적화를 위해 오프젝트 풀링 기법 사용
+* 투사체 클래스는 풀액터(PoolActor)의 클래스를 상속 받음​
+* 인게임 내 서버 측에서 한 개체의 액터풀이 투사체들을 관리​
+
+* 장점: 오브젝트의 생성과 삭제로 인한 과부하 방지​
+* 오브젝트 삭제로 인한 가비지 컬렉터 실행(성능 저하 요인)을 방지​
+
