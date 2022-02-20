@@ -227,3 +227,8 @@ void AMyCustomVehicle::CheckBack()​
 * 참조 영상
 * [NDC] 〈카트라이더〉 0.001초 차이의 승부 - 300km/h 물체의 네트워크 동기화 모델 구현기​
 * https://www.youtube.com/watch?v=r4ZaolMQOzE&t=23s​
+
+
+![2022-02-20 (4)](https://user-images.githubusercontent.com/55441587/154846283-ece3c0a5-ffdb-427f-8b3c-fb5eee8cdfa5.png)
+![2022-02-20 (5)](https://user-images.githubusercontent.com/55441587/154846286-8a7f77b2-36e6-4b32-814c-f53ec921fb63.png)
+![2022-02-20](https://user-images.githubusercontent.com/55441587/154846290-91c9f63a-674d-411a-b7da-ae07918e7e79.png)
