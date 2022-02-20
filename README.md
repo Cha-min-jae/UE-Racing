@@ -3,26 +3,22 @@
 카트라이더 모작으로 만든 레이싱 게임입니다.
 
 * 개발 엔진:Unreal Engine 4 (4.24.2)
-* 제작기간:2020/02/05 ~ 2021/09/01​
-* 제작인원:1명​
-* 게임 장르:레이싱 게임​
+* 제작기간:2020/02/05 ~ 2021/09/01
+* 제작인원:1명
+* 게임 장르:레이싱 게임
 
-### 기술 설명​
-* Vehicle(Pawn), MyPlayerController, Projectile등의 Actor ​
+## 기술 설명​
+* Vehicle(Pawn), MyPlayerController, Projectile등의 Actor
 * 물체의 네트워크 동기화 모델 구현
-* ReplayRecordComponent으로 실시간 정보를 기록.​
-* ReplayController로 기록된 정보를 읽어서 재생하기.​
-* Object Pooling 기법을 이용한 메모리 최적화​
+* ReplayRecordComponent으로 실시간 정보를 기록.
+* ReplayController로 기록된 정보를 읽어서 재생하기.
+* Object Pooling 기법을 이용한 메모리 최적화
 
-### Vehicle Movement
-
-* 차량의 움직임은 Addforce(앞뒤)와 AddTorque(좌우)로 움직임을 구현​
-
-* 그립주행을 위해 미끄러지는 반대 방향으로 AddForce를 실행함​
-
-* 차량이 바퀴에 지탱하는 것처럼 표현​
-
-* 차량의 바퀴 중심점과 지면의 거리에 따라 위쪽 방향으로 Addforce가 실행된다.​
+## Vehicle Movement
+* 차량의 움직임은 Addforce(앞뒤)와 AddTorque(좌우)로 움직임을 구현
+* 그립주행을 위해 미끄러지는 반대 방향으로 AddForce를 실행함
+* 차량이 바퀴에 지탱하는 것처럼 표현
+* 차량의 바퀴 중심점과 지면의 거리에 따라 위쪽 방향으로 Addforce가 실행된다.
 ![image2](https://user-images.githubusercontent.com/55441587/154320276-66e23977-f757-471d-a0f2-af64eb8ee5d0.jpeg)
 ```
 void UWheelAndMeshComponent::WheelFunction(float Dt,bool isSlip)​
@@ -100,8 +96,7 @@ void UWheelAndMeshComponent::WheelFunction(float Dt,bool isSlip)​
 ```
 ![image3](https://user-images.githubusercontent.com/55441587/154320377-88d9fb27-f695-434b-af3f-f455230f3ae1.png)
 
-### 백미러 구현
----
+## 백미러 구현
 ```
 void AMyCustomVehicle::CheckBack()​
 
@@ -219,8 +214,7 @@ void AMyCustomVehicle::CheckBack()​
 }
 ```
 
-#### 물체의 네트워크 동기화 모델 구현​
----
+## 물체의 네트워크 동기화 모델 구현
 * 자신의 폰의 위치를 자신의 클라이언트 시점의 위치로 다른 클라이언트들의 시점의 위치를 비슷하게 맞추는 것​
 * 서버에서 받아온 정보를 토대로 외삽값을 산출​
 * 현재 클라이언트 정보와 외삽값으로 보간​
@@ -234,7 +228,7 @@ void AMyCustomVehicle::CheckBack()​
 ![2022-02-20 (5)](https://user-images.githubusercontent.com/55441587/154846286-8a7f77b2-36e6-4b32-814c-f53ec921fb63.png)
 
 
-### Projectile,Mine,Spaceship등의 투사체 오브젝트&오브젝트 풀링
+## Projectile,Mine,Spaceship등의 투사체 오브젝트&오브젝트 풀링
 
 * 메모리 최적화를 위해 오프젝트 풀링 기법 사용
 * 투사체 클래스는 풀액터(PoolActor)의 클래스를 상속 받음​
