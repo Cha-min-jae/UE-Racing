@@ -153,13 +153,11 @@ void AMyCustomVehicle::CheckBack()​
         }​
     }​
     ///3.Vehicle객체들 중 뒤에 있는 것만 고르고​
-
-///4.그 중에 제일 가깝거나 액터 뒤쪽 기준으로 각도가 좁은 것을 최종적으로 고른다.​
+    ///4.그 중에 제일 가깝거나 액터 뒤쪽 기준으로 각도가 좁은 것을 최종적으로 고른다.​
 
     BackMirrorVehicleTarget = nullptr;​
 
     for (auto VV : VehicleArray)​
-
     {
         FVector dist = (VV->GetActorLocation() - GetActorLocation());
         float dot = FVector::DotProduct(GetActorForwardVector(), dist.GetSafeNormal());
@@ -175,7 +173,6 @@ void AMyCustomVehicle::CheckBack()​
             else
             {
                 /// 현재 검사할 타겟이 지정된 목표보다 거리가 낮을경우 새로 변경​
-
                 FVector distPrev = BackMirrorVehicleTarget->GetActorLocation() - GetActorLocation();
                 float anglePrev = FMath::Abs<float>(FVector::DotProduct(GetActorForwardVector(), distPrev.GetSafeNormal()) * 57.14);
                 if (distPrev.Size() > dist.Size()) BackMirrorVehicleTarget = VV;
@@ -189,14 +186,6 @@ void AMyCustomVehicle::CheckBack()​
     if (BackMirrorVehicleTarget != nullptr)
     {
         FRotator LookAtTarget = UKismetMathLibrary::FindLookAtRotation(Center, BackMirrorVehicleTarget->GetActorLocation());
-        BackMirrorSpringArm->SetWorldRotation(LookAtTarget);
-    }
-}
-    
-    ///5.BackMirror방향을 내 시점에서 선택된 차량을 바라보는 방향으로 설정한다​
-    if (BackMirrorVehicleTarget != nullptr)
-    {
-        FRotator LookAtTarget = UKismetMathLibrary::FindLookAtRotation(Center, BackMirrorVehicleTarget->GetActorLocation());​
         BackMirrorSpringArm->SetWorldRotation(LookAtTarget);
     }
 }
