@@ -8,7 +8,7 @@
 * 게임 장르:레이싱 게임
 
 * 영상
-[![카트라이더 모작 포트폴리오](http://img.youtube.com/vi/O5TG4-8mJEg/0.jpg)](https://youtu.be/O5TG4-8mJEg) 
+* [![카트라이더 모작 포트폴리오](http://img.youtube.com/vi/O5TG4-8mJEg/0.jpg)](https://youtu.be/O5TG4-8mJEg) 
 
 ## 기술 설명​
 * Vehicle(Pawn), MyPlayerController, Projectile등의 Actor
