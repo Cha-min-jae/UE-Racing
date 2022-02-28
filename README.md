@@ -8,7 +8,7 @@
 * 게임 장르:레이싱 게임
 
 * 영상
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/O5TG4-8mJEg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 기술 설명​
 * Vehicle(Pawn), MyPlayerController, Projectile등의 Actor
