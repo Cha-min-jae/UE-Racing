@@ -8,7 +8,8 @@
 * 게임 장르:레이싱 게임
 
 * 영상
-<iframe width="956" height="538" src="https://www.youtube.com/embed/ozv4q2ov3Mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## 기술 설명​
 * Vehicle(Pawn), MyPlayerController, Projectile등의 Actor
 * 물체의 네트워크 동기화 모델 구현
