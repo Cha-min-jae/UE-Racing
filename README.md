@@ -221,7 +221,9 @@ void AMyCustomVehicle::CheckBack()​
 ![Screenshot_20220803-084448_PowerPoint](https://user-images.githubusercontent.com/55441587/182495316-9029ff53-6616-4a7e-a7c6-feeeaca74241.jpg)!
 ![Screenshot_20220803-084428_PowerPoint](https://user-images.githubusercontent.com/55441587/182495527-3b6efe5a-9e0d-46ec-b165-78c60b79da0f.jpg)
 ## 아이템전 리플레이
-
+* 각 클라이언트에
+(Attacker, Victim, Spectator)의 MultiCast 함수가 시작하는 타이밍과  끝나는 타이밍에
+아이템 이벤트(AttackerNumber,Victim Number,Item,StartTransform,TargetTransform)를 기록한다.
 
 ![image14](https://user-images.githubusercontent.com/55441587/182495283-395255d5-4efd-4691-a0ed-8fa8a217567d.jpeg)
 ![image15](https://user-images.githubusercontent.com/55441587/182495287-9bd72e7f-3685-4380-ae06-cf7c465dec4c.jpeg)
