@@ -230,7 +230,7 @@ void AMyCustomVehicle::CheckBack()​
 ![image16](https://user-images.githubusercontent.com/55441587/182495291-e509f5f3-8413-44bc-be6d-1f053b7e1a5e.jpeg)
 
 
-![](https://user-images.githubusercontent.com/55441587/191383549-d44a8000-40d1-4cd0-8325-a2494a52d716.mp4)
+![](https://user-images.githubusercontent.com/55441587/191383475-a08a7bd8-b1fd-43ab-844e-c1827756e8b2.gif)
 
 ![UE4Editor 2022-09-21 08-01-44-281](https://user-images.githubusercontent.com/55441587/192158783-a7d13739-c916-441c-944d-8b3a3f4c795e.gif)
 ![UE4Editor 2022-09-21 08-01-29-479](https://user-images.githubusercontent.com/55441587/192158784-180b77b6-be9c-49a7-ab1e-29f210af09c7.gif)
