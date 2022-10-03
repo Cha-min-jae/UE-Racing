@@ -227,10 +227,11 @@ void AMyCustomVehicle::CheckBack()​
 
 ![UE4Editor_2022-10-04_07-38-24-735_AdobeExpress](https://user-images.githubusercontent.com/55441587/193698682-33223261-41aa-4016-aaaf-4bd08b070f3e.gif)
 
-![](https://user-images.githubusercontent.com/55441587/191383475-a08a7bd8-b1fd-43ab-844e-c1827756e8b2.gif)
+
 ## 착지 예측 시스템
 * 카트가 뜨자마자 중력을 제외하고는 아무 힘도 받지 않는 포물선 운동 상태​
 * 앞방향 속도가 일정한 포물선 운동으로 착지 예상 지점을 산출
+![](https://user-images.githubusercontent.com/55441587/191383475-a08a7bd8-b1fd-43ab-844e-c1827756e8b2.gif)
 
 ![UE4Editor 2022-09-21 08-01-44-281](https://user-images.githubusercontent.com/55441587/192158783-a7d13739-c916-441c-944d-8b3a3f4c795e.gif)
 ![UE4Editor 2022-09-21 08-01-29-479](https://user-images.githubusercontent.com/55441587/192158784-180b77b6-be9c-49a7-ab1e-29f210af09c7.gif)
