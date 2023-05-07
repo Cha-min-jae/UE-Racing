@@ -3,7 +3,7 @@
 카트라이더 모작으로 만든 레이싱 게임입니다.
 
 * 개발 엔진:Unreal Engine 4 (4.24.2)
-* 제작기간:2020/02/05 ~ 2022/08/02
+* 제작기간:2020/02/05 ~ 2023/04/25
 * 제작인원:1명
 * 게임 장르:레이싱 게임
 
@@ -237,3 +237,7 @@ void AMyCustomVehicle::CheckBack()​
 ![UE4Editor 2022-09-21 08-01-29-479](https://user-images.githubusercontent.com/55441587/192158784-180b77b6-be9c-49a7-ab1e-29f210af09c7.gif)
 ![UE4Editor 2022-09-21 08-01-04-038](https://user-images.githubusercontent.com/55441587/192158787-ee7f89cf-f902-4558-b7e0-ad0d2c100d5f.gif)
 
+## AI 주행 시스템
+* 네비게이션 시스템과 스플라인 컴포넌트를 이용한 AI 주행 시스템 구현​
+* AI가 스플라인 루트를 따라 주행
+[![카트라이더 모작 포트폴리오](http://img.youtube.com/vi/3XUmtAgs6Ww/0.jpg)](https://youtu.be/3XUmtAgs6Ww) 
