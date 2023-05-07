@@ -239,5 +239,5 @@ void AMyCustomVehicle::CheckBack()​
 
 ## AI 주행 시스템
 * 네비게이션 시스템과 스플라인 컴포넌트를 이용한 AI 주행 시스템 구현​
-* AI가 스플라인 루트를 따라 주행
+* AI가 스플라인 루트를 따라 주행​
 [![카트라이더 모작 포트폴리오](http://img.youtube.com/vi/3XUmtAgs6Ww/0.jpg)](https://youtu.be/3XUmtAgs6Ww) 
